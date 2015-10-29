@@ -1,0 +1,12 @@
+<h1><%= @cocktail.name %></h1>
+
+<h3> Doses </h3>
+
+<% @cocktail.doses.each do |dose| %>
+  <li>
+    <%= dose.description %>
+  </li>
+<% end %>
+
+
+<p><%= link_to "Back to cocktails list", cocktails_path %></p>

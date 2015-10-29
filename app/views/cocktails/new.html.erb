@@ -1,0 +1,12 @@
+<h1 class="text-center">Add a new cocktail </h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name, placeholder: "Mojito" %>
+        <%= f.button :submit, class: "btn btn-success" %>
+      <% end %>
+    </div>
+  </div>
+</div>
