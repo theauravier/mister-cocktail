@@ -1,0 +1,14 @@
+<h1 class="text-center">Cocktails containing <%= @ingredient.name %></h1>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <% @ingredient.cocktails.each do |cocktail| %>
+        <li>
+          <%= cocktail.name %>
+        </li>
+      <% end %>
+      <p><%= link_to "Back to ingredients list", ingredients_path %></p>
+    </div>
+  </div>
+</div>
