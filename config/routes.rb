@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :doses, only: [:new, :create, :destroy]
   end
 
+  resources :ingredients, only: [:index, :show]
 
   root 'cocktails#index'
 

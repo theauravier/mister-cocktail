@@ -12,6 +12,7 @@ class CocktailsController < ApplicationController
   def create
     @cocktail = Cocktail.new(cocktail_params)
     if @cocktail.save
+      flash[:notice] = "Cocktail #{@cocktail.name} has been created"
       redirect_to new_cocktail_dose_path(@cocktail)
     else
       render :new
