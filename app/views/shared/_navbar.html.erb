@@ -6,31 +6,22 @@
     <div class="navbar-wagon-pusher"></div>
 
     <hr class="hidden-xs hidden-sm">
-      <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link hidden-xs" do %>
+      <%= link_to ingredients_path, class: "navbar-wagon-item navbar-wagon-link hidden-xs" do %>
         <div class="icon-badge-container">
-          <i class="fa fa-envelope-o"></i>
-          <div class="icon-badge icon-badge-blue">3</div>
+          <i class="fa fa-lemon-o"></i>
+          <div class="icon-badge icon-badge-blue"><%= Ingredient.count %></div>
         </div>
       <% end %>
       <hr>
-      <div class="navbar-wagon-item">
-        <div class="dropdown">
-          <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-user"></i> <%= t ".profile", default: "Profile" %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-home"></i>  <%= t ".profile", default: "Home" %>
-              <% end %>
-            </li>
-          </ul>
+
+      <hr class="hidden-xs hidden-sm">
+      <%= link_to cocktails_path, class: "navbar-wagon-item navbar-wagon-link hidden-xs" do %>
+        <div class="icon-badge-container">
+          <i class="fa fa-glass"></i>
+          <div class="icon-badge icon-badge-blue"><%= Cocktail.count %></div>
         </div>
-      </div>
-    <hr>
+      <% end %>
+      <hr>
     <%= link_to t(".top_call_to_action", default: "New Cocktail"), new_cocktail_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
   </div>
 </nav>
