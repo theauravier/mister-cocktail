@@ -19,7 +19,9 @@ class CocktailsController < ApplicationController
     end
   end
   def destroy
-    @cocktail = Cocktail.destroy
+    @cocktail = Cocktail.destroy(find_cocktail)
+    flash[:notice] = "Cocktail #{@cocktail.name} has been deleted"
+    redirect_to cocktails_path
   end
   private
   def cocktail_params
