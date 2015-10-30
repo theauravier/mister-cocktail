@@ -22,7 +22,7 @@ class CocktailsController < ApplicationController
   end
   private
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :picture)
   end
   def find_cocktail
     @cocktail = Cocktail.find(params[:id])
